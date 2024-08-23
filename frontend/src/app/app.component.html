@@ -1,0 +1,40 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="app.component.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">Login Application</div>
+    <div class="nav-links" id="navLinks">
+      <a routerLink="/login">Login</a>
+      <a routerLink="/register">Register</a>
+  
+    </div>
+    <span class="hamburger" id="hamburger">&#9776;</span>
+</nav>
+
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+</script>
+
+<!-- This is where the routed component will be loaded -->
+<router-outlet></router-outlet>
+</body>
+</html>
+
+
+
+
+
